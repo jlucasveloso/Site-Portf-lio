@@ -1,0 +1,70 @@
+:root {
+  --navy: #0a192f;
+  --light-navy: #112240;
+  --lightest-navy: #233554;
+  --slate: #ccd6f6;
+  --white: #e6f1ff;
+  --green: #34d399;
+
+}
+
+body {
+  background-color: var(--navy);
+  color: var(--white);
+  font-family: "Lato", sans-serif;
+
+
+}
+
+.heading {
+  line-height: 1.5; /* Ajuste para garantir o espaçamento adequado */
+  margin-bottom: 1rem; /* Adiciona um pequeno espaçamento abaixo do título */
+}
+
+/* Removendo a linha de baixo dos títulos (como "Sobre Mim" e "Projetos") */
+.heading::after {
+  content: none; /* Remove a linha */
+}
+
+.heading span {
+  display: inline-block; /* Garante que os elementos dentro do título não se sobreponham */
+}
+
+/* Para a imagem de perfil */
+.profile-img {
+  border-radius: 1rem;
+  filter: grayscale(100%) sepia(100%) hue-rotate(90deg);
+  max-height: 200px;
+  border: 2px solid var(--green);
+}
+
+.profile-img:hover {
+  filter: none;
+  border: 2px solid darkgrey;
+}
+
+.experience-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.experience-list li::before {
+  content: "▹";
+  position: absolute;
+  left: 0px;
+  color: var(--green);
+}
+
+/* Para o botão de WhatsApp */
+a i.fab.fa-whatsapp {
+  font-size: 1.2rem;
+  margin-left: 0.5rem;
+}
+
+/* Responsividade: garantindo o espaçamento adequado em telas menores */
+@media (max-width: 640px) {
+  .heading {
+    text-align: center; /* Centraliza o título em telas menores */
+  }
+}
